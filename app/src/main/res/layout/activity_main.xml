@@ -4,34 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
 
     <EditText
         android:id="@+id/txtLatitud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="date"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/txtLongitud"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="75dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/txtLongitud"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="178dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:inputType="date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteX="68dp"
         app:layout_constraintBottom_toTopOf="@id/maps"
-        tools:layout_editor_absoluteY="138dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <fragment
         android:id="@+id/maps"
@@ -56,4 +57,13 @@
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/maps" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/maps"
+        app:layout_constraintTop_toTopOf="parent"
+        map:srcCompat="@mipmap/logosantotomas"
+        tools:layout_editor_absoluteX="191dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
